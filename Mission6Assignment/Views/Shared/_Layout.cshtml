@@ -1,0 +1,49 @@
+﻿<!--
+    Author: Nya Croft
+    Section: 004
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel's Film Collection</title>
+    <link rel="shortcut icon" href="~/img/KayakIcon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NyaCroftMission5Assignment.styles.css" asp-append-version="true" />
+</head>
+
+<!--Shared Navbar-->
+<body>
+    <nav>
+        <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="GetToKnow">Get To Know Joel</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="AddMovie">Add A Movie</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Nya Croft - <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            Email: nyatcroft@gmail.com
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

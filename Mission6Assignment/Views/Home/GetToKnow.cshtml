@@ -1,0 +1,71 @@
+﻿<!-- 
+    Author: Nya Croft
+    Section: 004
+
+-->
+@{
+    ViewData["Title"] = "Get to Know Joel Hilton";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px; /* Add some space between the image containers */
+    }
+
+        .image-container a,
+        .image-container img {
+            display: block;
+        }
+
+    .url-text {
+        font-size: 14px; /* Smaller font size for the link */
+        margin-top: 5px; /* Space between the image and link */
+        color: #007bff; /* Typical link color */
+        text-decoration: none; /* Optional: Removes underline from links */
+    }
+
+        .url-text:hover {
+            text-decoration: underline; /* Restores underline on hover for visual feedback */
+        }
+</style>
+
+<br />
+<header>
+    <h1>Get to Know Joel</h1>
+</header>
+
+<br />
+<br />
+
+<div class="container">
+    <h2>Quick Wits Comedy</h2>
+    <div class="image-container">
+        <a href="https://www.qwcomedy.com/">
+            <img src="~/img/QuickWitsReal.JPG" alt="Quick Wits" height="250">
+        </a>
+        <a href="https://www.qwcomedy.com/" class="url-text">Visit Quick Wits Comedy</a> <!-- Clickable link displayed under the photo -->
+    </div>
+</div>
+
+<div class="container">
+    <h2>Baconsale</h2>
+    <div class="image-container">
+        <a href="https://baconsale.com/">
+            <img src="~/img/BaconsaleKate.jpg" alt="Baconsale" height="250">
+        </a>
+        <a href="https://baconsale.com/" class="url-text">Visit Baconsale</a> <!-- Clickable link displayed under the photo -->
+    </div>
+</div>
+
+<br />
+<br />

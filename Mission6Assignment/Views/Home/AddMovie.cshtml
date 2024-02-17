@@ -1,0 +1,98 @@
+﻿<!--
+    Author: Nya Croft
+    Section: 004
+
+-->
+@{
+    ViewData["Title"] = "Add A Movie";
+}
+
+@model AddMovieForm
+<style>
+    .container {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-wrap: wrap;
+        gap: 20px; 
+        text-align: center;
+    }
+
+    .contact-form, .contact-image {
+        flex: 1; 
+        max-width: 50%; 
+        text-align: center;
+    }
+
+    .contact-image {
+        max-width: 500px; 
+        height: auto; 
+    }
+</style>
+<br />
+<header>
+    <h1>Add A Movie</h1>
+</header>
+<br />
+<br />
+
+<div class="image-with-padding">
+    <img src="~/img/Movies.jpg" alt="Your Photo" width="300" height="200">
+</div>
+<br />
+<br />
+
+<!--Form to add movie-->
+<div class="container">
+    <div class="contact-form">
+        <form method="post">
+            <label asp-for="Category">Category:</label>
+            <input asp-for="Category" required />
+            <br />
+            <br />
+            <label asp-for="Title">Title: </label>
+            <input asp-for="Title" required />
+            <br />
+            <br />
+            <label asp-for="Year">Year:</label>
+            <input asp-for="Year" required />
+            <br />
+            <br />
+            <label asp-for="Director">Director:</label>
+            <input asp-for="Director" required />
+            <br />
+            <br />
+            <label asp-for="Rating">Rating:</label>
+            <select asp-for="Rating" required>
+                <option value=""> </option>
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+            </select>
+            <br />
+            <br />
+            <label asp-for="Edited">Edited:</label>
+            <br />
+            <div>
+                <label>
+                    <input type="radio" asp-for="Edited" value="true" required /> Yes
+                </label>
+                <label>
+                    <input type="radio" asp-for="Edited" value="false" /> No
+                </label>
+            </div>
+            <br />
+            <br />
+            <label asp-for="LentTo">Lent To:</label>
+            <input asp-for="LentTo" />
+            <br />
+            <br />
+            <label asp-for="Notes">Notes:</label>
+            <input asp-for="Notes" maxlength="25" />
+            <br />
+            <br />
+            <button type="submit">Submit Movie</button>
+        </form>
+    </div>
+</div>

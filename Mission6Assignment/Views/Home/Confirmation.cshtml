@@ -1,0 +1,26 @@
+﻿<!-- 
+    Author: Nya Croft
+    Section: 004
+-->
+
+<!--Display page after form to add movie has been submitted-->
+
+@model AddMovieForm //This is the model that I want to use in this view
+
+<br />
+<br />
+<h2>Movie @Model.Title submitted. Thank you!</h2>
+<br />
+<br />
+<div class="image-with-padding">
+    <img src="~/img/movie-night.png" alt="Your Photo" width="300" height="200">
+
+    <a asp-area="" asp-controller="Home" asp-action="AddMovie" class="quote-button">Add another Movie</a>
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="quote-button">Home</a>
+
+
+</div>
+
+
+
+
