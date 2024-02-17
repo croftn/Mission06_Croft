@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NyaCroftMission6Assignment.Models
+namespace Mission06_Croft.Models
 {
     public class AddMovieForm
     {

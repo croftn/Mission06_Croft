@@ -1,7 +1,7 @@
 // Author: Nya Croft
 // Section: 004
 
-using NyaCroftMission6Assignment.Models;
+using Mission06_Croft.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using NyaCroftMission6Assignment.Models;
+using Mission06_Croft.Models;
 using System.Diagnostics;
 
-namespace NyaCroftMission6Assignment.Controllers
+namespace Mission06_Croft.Controllers
 {
     public class HomeController : Controller
     {

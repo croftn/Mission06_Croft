@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NyaCroftMission6Assignment.Models;
+using Mission06_Croft.Models;
 
 #nullable disable
 
-namespace NyaCroftMission6Assignment.Migrations
+namespace Mission06_Croft.Migrations
 {
     [DbContext(typeof(AddMovieContext))]
-    [Migration("20240216234552_migration5")]
-    partial class migration5
+    [Migration("20240217001300_migration6")]
+    partial class migration6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace NyaCroftMission6Assignment.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
 
-            modelBuilder.Entity("NyaCroftMission6Assignment.Models.AddMovieForm", b =>
+            modelBuilder.Entity("Mission06_Croft.Models.AddMovieForm", b =>
                 {
                     b.Property<int>("MovieID")
                         .ValueGeneratedOnAdd()

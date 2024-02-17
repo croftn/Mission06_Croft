@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-namespace NyaCroftMission6Assignment.Models
+namespace Mission06_Croft.Models
 {
     public class AddMovieContext : DbContext
     {
