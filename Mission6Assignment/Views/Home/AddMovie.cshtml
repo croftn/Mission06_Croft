@@ -7,7 +7,8 @@
     ViewData["Title"] = "Add A Movie";
 }
 
-@model AddMovieForm
+@model Movie
+
 <style>
     .container {
         display: flex;
@@ -46,24 +47,32 @@
 <div class="container">
     <div class="contact-form">
         <form method="post">
-            <label asp-for="Category">Category:</label>
-            <input asp-for="Category" required />
+            <input type="hidden" asp-for="MovieId" />
+
+            <label asp-for="CategoryId">Category: </label>
+            <select asp-for="CategoryId">
+                <option value="">Select a Category</option>
+                @foreach (Category c in ViewBag.Categories)
+                {
+                    <option value="@c.CategoryId">@c.CategoryName</option>
+                }
+            </select>
             <br />
             <br />
             <label asp-for="Title">Title: </label>
-            <input asp-for="Title" required />
+            <input asp-for="Title" />
             <br />
             <br />
             <label asp-for="Year">Year:</label>
-            <input asp-for="Year" required />
+            <input asp-for="Year" />
             <br />
             <br />
             <label asp-for="Director">Director:</label>
-            <input asp-for="Director" required />
+            <input asp-for="Director" />
             <br />
             <br />
             <label asp-for="Rating">Rating:</label>
-            <select asp-for="Rating" required>
+            <select asp-for="Rating" >
                 <option value=""> </option>
                 <option value="G">G</option>
                 <option value="PG">PG</option>
@@ -76,7 +85,7 @@
             <br />
             <div>
                 <label>
-                    <input type="radio" asp-for="Edited" value="true" required /> Yes
+                    <input type="radio" asp-for="Edited" value="true" /> Yes
                 </label>
                 <label>
                     <input type="radio" asp-for="Edited" value="false" /> No
@@ -89,10 +98,12 @@
             <br />
             <br />
             <label asp-for="Notes">Notes:</label>
-            <input asp-for="Notes" maxlength="25" />
+            <input asp-for="Notes" />
             <br />
             <br />
             <button type="submit">Submit Movie</button>
+            <br />
+            <div asp-validation-summary="All"></div>
         </form>
     </div>
 </div>

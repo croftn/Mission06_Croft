@@ -9,6 +9,7 @@ namespace Mission06_Croft.Models
         {
         }
 
-        public DbSet<AddMovieForm> Movies { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
