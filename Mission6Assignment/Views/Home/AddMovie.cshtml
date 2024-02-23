@@ -97,12 +97,26 @@
             <input asp-for="LentTo" />
             <br />
             <br />
+            <label asp-for="CopiedToPlex">Copied to Plex:</label>
+            <br />
+            <div>
+                <label>
+                    <input type="radio" asp-for="CopiedToPlex" value="true" /> Yes
+                </label>
+                <label>
+                    <input type="radio" asp-for="CopiedToPlex" value="false" /> No
+                </label>
+            </div>
+            <br />
+            <br />
             <label asp-for="Notes">Notes:</label>
             <input asp-for="Notes" />
             <br />
             <br />
             <button type="submit">Submit Movie</button>
             <br />
+            <br />
+            <br /> 
             <div asp-validation-summary="All"></div>
         </form>
     </div>

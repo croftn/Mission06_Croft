@@ -16,8 +16,8 @@ namespace Mission06_Croft.Models
         [Required(ErrorMessage = "Title is required")]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "Year is required")]
-        [Range(1888, int.MaxValue, ErrorMessage ="Year must be greater than or equal to 1888")]
+        [Required]
+        [Range(1888, 2024, ErrorMessage ="Year is required and must be greater than or equal to 1888")]
         public int Year { get; set; }
 
 
@@ -25,13 +25,13 @@ namespace Mission06_Croft.Models
 
         public string ? Rating { get; set; }
 
-        [Required(ErrorMessage ="Edited status is required")]
-        public bool  Edited { get; set; }
+        [Required(ErrorMessage = "Edited status is required")]
+        public bool ? Edited { get; set; }
 
         public string ? LentTo { get; set; }
 
         [Required(ErrorMessage = "Copied to Plex status is required")]
-        public int CopiedToPlex { get; set; }
+        public bool ? CopiedToPlex { get; set; }
 
         [MaxLength(25)]
         public string ? Notes { get; set; }
