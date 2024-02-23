@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// Author: Nya Croft
+// Section 004
+
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Mission06_Croft.Models

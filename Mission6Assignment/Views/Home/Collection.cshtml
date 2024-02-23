@@ -1,41 +1,59 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!--
+    Author: Nya Croft
+    Section: 004
+
+-->
 
 @model List<Movie>
 
-<table class="table table-bordered">
-    <thead class="fw-bold">
+<style>
+    .table th, .table td {
+        vertical-align: middle; /* Center align table cells content */
+    }
+
+    .btn-actions {
+        display: flex;
+        gap: 10px; /* Space between buttons */
+        justify-content: center; /* Center align buttons */
+    }
+</style>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<!--Table to display movies-->
+<table class="table table-bordered table-hover table-striped">
+    <thead class="thead-dark">
         <tr>
-            <td>Category</td>
-            <td>Title</td>
-            <td>Year</td>
-            <td>Director</td>
-            <td>Rating</td>
-            <td>Edited</td>
-            <td>Lent To</td>
-            <td>Copied to Plex</td>
-            <td>Notes</td>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Rating</th>
+            <th>Edited</th>
+            <th>Lent To</th>
+            <th>Copied to Plex</th>
+            <th>Notes</th>
+            <th>Actions</th>
         </tr>
     </thead>
-
-    @foreach (var x in Model)
-    {
-        <tbody>
-            <td>@x.CategoryId</td>
-            <td>@x.Title</td>
-            <td>@x.Year</td>
-            <td>@x.Director</td>
-            <td>@x.Rating</td>
-            <td>@x.Edited</td>
-            <td>@x.LentTo</td>
-            <td>@x.CopiedToPlex</td>
-            <td>@x.Notes</td>
-
-            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">Edit</a></td>
-            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId">Delete</a></td>
-        </tbody>
-    }
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.CategoryId</td> <!-- Assuming Category is a navigation property -->
+                <td>@x.Title</td>
+                <td>@x.Year</td>
+                <td>@x.Director</td>
+                <td>@x.Rating</td>
+                <td>@x.Edited</td>
+                <td>@x.LentTo</td>
+                <td>@x.CopiedToPlex</td>
+                <td>@x.Notes</td>
+                <td class="btn-actions">
+                    <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">Edit</a>
+                    <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

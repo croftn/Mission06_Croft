@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Author: Nya Croft
+// Section 004
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission06_Croft.Models
@@ -16,9 +19,9 @@ namespace Mission06_Croft.Models
         [Required(ErrorMessage = "Title is required")]
         public string Title { get; set; }
 
-        [Required]
-        [Range(1888, 2024, ErrorMessage ="Year is required and must be greater than or equal to 1888")]
-        public int Year { get; set; }
+        [Required(ErrorMessage = "Year is required")]
+        [Range(1888, 2024, ErrorMessage ="Year must be greater than or equal to 1888")]
+        public int ? Year { get; set; }
 
 
         public string ? Director { get; set; }

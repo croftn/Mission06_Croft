@@ -1,3 +1,6 @@
+// Author: Nya Croft
+// Section 004
+
 using Microsoft.AspNetCore.Mvc;
 using Mission06_Croft.Models;
 using System.Diagnostics;
@@ -60,6 +63,7 @@ namespace Mission06_Croft.Controllers
 
         }
 
+        //Dislay database of movies
         public IActionResult Collection()
         {
             var movies = _context.Movies
@@ -68,6 +72,7 @@ namespace Mission06_Croft.Controllers
             return View(movies);
         }
 
+        //Edit Movies
         [HttpGet]
 
         public IActionResult Edit(int id)
@@ -91,6 +96,8 @@ namespace Mission06_Croft.Controllers
             return RedirectToAction("Collection");
         }
 
+
+        //Delete movies
         [HttpGet]
         public IActionResult Delete(int id)
         {

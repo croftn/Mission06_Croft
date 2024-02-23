@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Author: Nya Croft
+// Section 004
+
+using System.ComponentModel.DataAnnotations;
 
 namespace Mission06_Croft.Models
 {
